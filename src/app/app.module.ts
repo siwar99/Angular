@@ -18,6 +18,9 @@ import { ShowOneProductComponent } from './show-one-product/show-one-product.com
 import { AddProductComponent } from './add-product/add-product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { TaskComponent } from './component/task/task.component';
+import { ProjectsComponent } from './component/projects/projects.component';
+import { LoginComponent } from './component/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +36,10 @@ import { UpdateProductComponent } from './update-product/update-product.componen
     MobileComponent,
     ShowOneProductComponent,
     AddProductComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    TaskComponent,
+    ProjectsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

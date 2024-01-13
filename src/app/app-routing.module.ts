@@ -11,19 +11,15 @@ import { TvComponent } from './tv/tv.component';
 import { MobileComponent } from './mobile/mobile.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import {ProjectsComponent} from "./component/projects/projects.component";
+import {TaskComponent} from "./component/task/task.component";
+import {LoginComponent} from "./component/login/login.component";
 
 const routes: Routes = [
-  {path:'home', component:TestComponent},
-  {path:'', redirectTo:'home', pathMatch:'full'},
-  {path:'product',component:ProductComponent},
-  {path:'product/:id',component:DetailProductComponent},
-  {path:'update/:id',component:UpdateProductComponent},
-  {path:'showApparts/:id',component:AppartmentsComponent},
-  {path:'residence',component:ResidenceComponent},
-  {path:'form',component:ReactiveFormComponent},
-  {path:'tv',component:TvComponent},
-  {path:'mobile',component:MobileComponent},
-  {path:'add',component:AddProductComponent},
+  {path:'login', component:LoginComponent},
+  {path:'', redirectTo:'login', pathMatch:'full'},
+  {path:'project',component:ProjectsComponent},
+  {path:'task',component:TaskComponent},
   {path:'**', component:NotFoundComponent}
 ];
 

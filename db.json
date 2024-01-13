@@ -1,11 +1,21 @@
 {
-  "products": [
+  "Project": [
     {
       "id": 1,
-      "title": "alooo",
-      "price": 0,
-      "like": 5,
-      "quantity": 10
+      "title": "Project test",
+      "description": "description projet",
+      "tasks":[
+        {
+          "id": 1,
+          "title": "task 1",
+          "description": 0,
+          "dateD": "13-01-2024",
+          "status": "Active",
+          "project": {
+
+          }
+        }
+      ]
     }
   ]
 }

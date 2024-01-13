@@ -18,4 +18,7 @@ export class ProjectsComponent {
     )
   }
 
+  addTask(i: number) {
+    
+  }
 }

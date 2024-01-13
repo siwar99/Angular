@@ -3,14 +3,15 @@
   <tr>
     <th>ID</th>
     <th>TITLE</th>
-    <th>DESCRIPTION</th>>
+    <th>DESCRIPTION</th>
+    <th>Actions</th>
   </tr>
   <tr *ngFor="let p of listProjet;let i=index">
     <ng-container>
       <td>{{p.id}}</td>
       <td>{{p.title}}</td>
       <td>{{p.description}}</td>
-<!--      <td><button class="btn btn-info" (click)="increment(i)">Like</button></td>-->
+      <td><button class="btn btn-info" (click)="addTask(p)">addTask </button></td>
 <!--      <td><button class="btn btn-danger" (click)="buy(i)" [disabled]="p.quantity==0">buy</button></td>-->
 <!--      <td><button class="btn btn-success" [routerLink]="['/update',p.id]">update</button></td>-->
 <!--      <td><button class="btn btn-success" [routerLink]="['/product',p.id]">Details</button></td>-->

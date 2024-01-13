@@ -11,6 +11,9 @@ export class TaskService {
   gettasks(){
     return this.http.get<Project[]>('http://localhost:3000/tasks')
   }
+  addTaks(Task:any){
+    return this.http.post('http://localhost:3000/tasks',Task)
+  }
   getById(id:number){
     return this.http.get<Project[]>('http://localhost:3000/Project/'+id)
   }

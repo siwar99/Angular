@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
+import {TaskService} from "../../Services/task.service";
+import {ProjectService} from "../../Services/project.service";
 
 @Component({
   selector: 'app-add-task',
@@ -9,7 +11,12 @@ import {Router} from "@angular/router";
 })
 export class AddTaskComponent implements OnInit {
   form!: FormGroup;
-  constructor(private router:Router) {
+  constructor(private router:Router,
+  private service :TaskService,
+  private service2 :ProjectService,
+
+
+  ) {
   }
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -24,7 +31,7 @@ export class AddTaskComponent implements OnInit {
 
   login() {
 
-    this.router.navigate(['project']);
+    console.log(this.form.getRawValue())
 
   }
 }

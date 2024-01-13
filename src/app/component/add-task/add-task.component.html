@@ -1,1 +1,40 @@
-<p>add-task works!</p>
+<form [formGroup]="form">
+
+
+  <div class="form-group">
+    <label>title</label>
+    <input type="text" formControlName="title" placeholder="title" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>description</label>
+    <input type="text" formControlName="description" placeholder="description" class="form-control">
+  </div>
+
+
+  <div class="form-group">
+    <label>date debut</label>
+    <input type="date" formControlName="dateD" placeholder="date debut" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label>date fin</label>
+    <input
+      [min]="form.get('dateD')?.value" type="date" formControlName="dateF" placeholder="date Fin" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="pet-select">Status</label>
+
+    <select formControlName="dateF" value="To Do" name="To Do" id="pet-select">
+      <option value="To Do">To Do</option>
+      <option value="In progress">In progress</option>
+      <option value="Done">Done</option>
+    </select>
+
+  </div>
+
+</form>
+
+<br>
+<input class=" btn btn-info " type="submit " value="Se connecter " (click)="login() " [disabled]="form.invalid ">
+

@@ -1,1 +1,37 @@
-<p>login works!</p>
+<form [formGroup]="form">
+
+
+  <div class="form-group">
+    <label> Nom d'utlisateur</label>
+    <input type="text" formControlName="username" placeholder=" Nom d'utlisateur" class="form-control">
+  </div>
+  <div style="color:red" *ngIf="form.controls['username'].invalid   && form.controls[ 'username'].touched">
+    <div class="alert  alert-danger" *ngIf="form.controls['username'].hasError('minlength')">
+
+  minLength invalide
+    </div>
+    <div class="alert  alert-danger" *ngIf="form.get('username')?.hasError('required')">
+      required invalide
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Mot de passe </label>
+    <input type="text" formControlName="password" placeholder="Mot de passe " class="form-control">
+  </div>
+  <div style="color:red" *ngIf="form.controls['password'].invalid  && form.controls[ 'password'].touched">
+
+    <div class="alert  alert-danger" *ngIf="form.controls['password'].hasError('minlength')">
+      minLength invalide
+    </div>
+    <div class="alert  alert-danger" *ngIf="form.get('password')?.hasError('pattern')">
+      pattern invalide
+    </div>
+    <div class="alert  alert-danger" *ngIf="form.get('password')?.hasError('required')">
+      required invalide
+    </div>
+  </div>
+
+</form>
+<br>
+<input class=" btn btn-info " type="submit " value="Se connecter " (click)="login() " [disabled]="form.invalid ">
+

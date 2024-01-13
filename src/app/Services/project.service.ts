@@ -12,4 +12,7 @@ export class ProjectService {
   getProjet(){
     return this.http.get<Project[]>('http://localhost:3000/Project')
   }
+  getById(id:number){
+    return this.http.get<Project[]>('http://localhost:3000/Project/'+id)
+  }
 }

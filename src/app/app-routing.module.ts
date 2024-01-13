@@ -14,12 +14,15 @@ import { UpdateProductComponent } from './update-product/update-product.componen
 import {ProjectsComponent} from "./component/projects/projects.component";
 import {TaskComponent} from "./component/task/task.component";
 import {LoginComponent} from "./component/login/login.component";
+import {AddTaskComponent} from "./component/add-task/add-task.component";
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'', redirectTo:'login', pathMatch:'full'},
   {path:'project',component:ProjectsComponent},
   {path:'task',component:TaskComponent},
+  {path:'addTask/:id',component:AddTaskComponent},
+
   {path:'**', component:NotFoundComponent}
 ];
 

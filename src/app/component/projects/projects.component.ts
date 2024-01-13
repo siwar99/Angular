@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {ProjectService} from "../../Services/project.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-projects',
@@ -9,7 +10,7 @@ import {ProjectService} from "../../Services/project.service";
 export class ProjectsComponent {
   listProjet: any;
 
-  constructor(private  cons :ProjectService) {
+  constructor(private  cons :ProjectService,private router:Router) {
   }
   ngOnInit() {
     //this.listProducts = this.Ps.listProducts;
@@ -18,7 +19,8 @@ export class ProjectsComponent {
     )
   }
 
-  addTask(i: number) {
-    
+  addTask(i: any) {
+    this.router.navigate(['addTask/'+i.id]);
+
   }
 }

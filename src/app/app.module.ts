@@ -21,6 +21,8 @@ import { UpdateProductComponent } from './update-product/update-product.componen
 import { TaskComponent } from './component/task/task.component';
 import { ProjectsComponent } from './component/projects/projects.component';
 import { LoginComponent } from './component/login/login.component';
+import { AssTaskComponent } from './component/ass-task/ass-task.component';
+import { AddTaskComponent } from './component/add-task/add-task.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,9 @@ import { LoginComponent } from './component/login/login.component';
     UpdateProductComponent,
     TaskComponent,
     ProjectsComponent,
-    LoginComponent
+    LoginComponent,
+    AssTaskComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,

@@ -17,5 +17,18 @@
         }
       ]
     }
+  ],
+  "tasks":[
+    {
+      "id": 1,
+      "title": "task 1",
+      "description": 0,
+      "dateD": "13-01-2024",
+      "dateF": "13-01-2024",
+      "status": "Active",
+      "project": {
+
+      }
+    }
   ]
 }
